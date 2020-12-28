@@ -1,0 +1,58 @@
+{
+  "apps": [
+    {
+      "mainApps": "Profissional",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Quam nam accusantium ullam ut quisquam ipsa minus veniam ad molestias commodi aspernatur, odit vero maiores, dolorum itaque. Aliquid nemo sequi veniam.",
+      "price": "29,50",
+      "icon": "./assets/icons/ban-solid.svg"
+    },
+    {
+      "mainApps": "Reguladores",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Quam nam accusantium ullam ut quisquam ipsa minus veniam ad molestias commodi aspernatur, odit vero maiores, dolorum itaque. Aliquid nemo sequi veniam.",
+      "price": "29,50",
+      "icon": "./assets/icons/ban-solid.svg"
+    },
+    {
+      "mainApps": "Sócio Ambiental",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Quam nam accusantium ullam ut quisquam ipsa minus veniam ad molestias commodi aspernatur, odit vero maiores, dolorum itaque. Aliquid nemo sequi veniam.",
+      "price": "29,50",
+      "icon": "./assets/icons/ban-solid.svg"
+    },  
+    {
+      "mainApps": "Jurídico",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Quam nam accusantium ullam ut quisquam ipsa minus veniam ad molestias commodi aspernatur, odit vero maiores, dolorum itaque. Aliquid nemo sequi veniam.",
+      "price": "29,50",
+      "icon": "./assets/icons/ban-solid.svg"
+    },  
+    {
+      "mainApps": "Listas Restritivas",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Quam nam accusantium ullam ut quisquam ipsa minus veniam ad molestias commodi aspernatur, odit vero maiores, dolorum itaque. Aliquid nemo sequi veniam.",
+      "price": "29,50",
+      "icon": "./assets/icons/ban-solid.svg"
+    },  
+    {
+      "mainApps": "Mídia / Internet",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Quam nam accusantium ullam ut quisquam ipsa minus veniam ad molestias commodi aspernatur, odit vero maiores, dolorum itaque. Aliquid nemo sequi veniam.",
+      "price": "29,50",
+      "icon": "./assets/icons/ban-solid.svg"
+    },  
+    {
+      "mainApps": "Bens e Imóveis",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Quam nam accusantium ullam ut quisquam ipsa minus veniam ad molestias commodi aspernatur, odit vero maiores, dolorum itaque. Aliquid nemo sequi veniam.",
+      "price": "29,50",
+      "icon": "./assets/icons/ban-solid.svg"
+    },  
+    {
+      "mainApps": "Cadastro",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Quam nam accusantium ullam ut quisquam ipsa minus veniam ad molestias commodi aspernatur, odit vero maiores, dolorum itaque. Aliquid nemo sequi veniam.",
+      "price": "29,50",
+      "icon": "./assets/icons/ban-solid.svg"
+    },  
+    {
+      "mainApps": "Financeiro",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Quam nam accusantium ullam ut quisquam ipsa minus veniam ad molestias commodi aspernatur, odit vero maiores, dolorum itaque. Aliquid nemo sequi veniam.",
+      "price": "29,50",
+      "icon": "./assets/icons/ban-solid.svg"
+    } 
+  ]
+}
