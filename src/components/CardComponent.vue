@@ -7,28 +7,19 @@
           :item="entry"
           :key="index"
           @click="filter = entry"
-          class="apps__button"
+          class="apps__button"          
         >
           <div class="apps__button--flex">
-            
-            <img
-              class="apps__icons"
-              src="../assets/icons/globe-solid.svg"
-              alt="Todos"
-            />
+            <img class="apps__buttonIcons" :src="entry.icon" alt="Todos" />
             <p class="apps__name">{{ entry }}</p>
           </div>
         </button>
       </div>
-      
+
       <div class="apps__group">
         <div v-for="(entry, index) in apps" :key="index" class="apps__cards">
           <div class="apps__content">
-            <img
-              class="apps__icons"
-              src="../assets/icons/globe-solid.svg"
-              alt="Todos"
-            />
+            <img class="apps__groupIcons" :src="entry.icon" alt="Todos" />
             <h2 class="apps__title">{{ entry.mainApps }}</h2>
             <p class="apps__description">
               {{ entry.info }}
@@ -40,7 +31,6 @@
           </div>
         </div>
       </div>
-      
     </div>
   </div>
 </template>
@@ -135,6 +125,10 @@ button:active {
   color: #fff;
 }
 
+.apps__bar {
+  padding-top: 15px;
+}
+
 .apps__button {
   border: 0.5px solid #e4e4e4;
 }
@@ -151,8 +145,13 @@ button:active {
   flex-direction: column;
 }
 
-.apps__icons {
+.apps__buttonIcons {
   height: 24px;
+  margin-bottom: 10px;
+}
+
+.apps__groupIcons {
+  height: 32px;
   margin-bottom: 10px;
 }
 
