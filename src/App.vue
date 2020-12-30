@@ -1,19 +1,14 @@
 <template>
   <div id="app">
-    <HeaderComponent />
-    <CardComponent />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HeaderComponent from './components/HeaderComponent.vue'
-import CardComponent from './components/CardComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    HeaderComponent,
-    CardComponent
   }
 }
 </script>
@@ -26,7 +21,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* background: red; */
   height: 100vh;
+  display: flex;
 }
 </style>

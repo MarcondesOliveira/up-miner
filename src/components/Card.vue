@@ -7,10 +7,12 @@
           :item="entry"
           :key="index"
           @click="filter = entry"
-          class="apps__button"          
+          class="apps__button"
         >
+        
           <div class="apps__button--flex">
-            <img class="apps__buttonIcons" :src="entry.icon" alt="Todos" />
+            <img class="apps__buttonIcons" :src="entry.icon" alt="Icone" />
+            <!-- <img class="apps__buttonIcons" :src="apps.icon" alt="Icone" /> -->
             <p class="apps__name">{{ entry }}</p>
           </div>
         </button>
@@ -22,12 +24,14 @@
             <img class="apps__groupIcons" :src="entry.icon" alt="Todos" />
             <h2 class="apps__title">{{ entry.mainApps }}</h2>
             <p class="apps__description">
-              {{ entry.info }}
+              {{ entry.info }} 
             </p>
           </div>
           <div class="apps__price">
-            <p class="apps_value">R$ {{ entry.price }}</p>
-            <a href="#">Saiba mais</a>
+            <p class="apps__value">R$ {{ entry.price }}</p>
+            <router-link :to="`${entry.mainApps.replace(' ', '').normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}`">
+              Saiba mais          
+            </router-link>
           </div>
         </div>
       </div>
@@ -37,7 +41,7 @@
 
 <script>
 export default {
-  name: "CardComponent",
+  name: "Card",
   props: {
     msg: String,
   },
@@ -58,7 +62,7 @@ export default {
       ],
       filter: "Todos",
       apps: [],
-      fetchedApps: [],
+      fetchedApps: [],      
     };
   },
   created() {
@@ -78,6 +82,14 @@ export default {
           ? this.fetchedApps.filter((f) => f.mainApps === val)
           : this.fetchedApps;
     },
+  },
+  methods: {
+    readValue() {
+      this.apps.forEach(function(icon) {
+        console.log(icon)
+        return icon
+      })
+    }
   }
 };
 </script>
@@ -91,6 +103,7 @@ $button-color1: #ff924e;
 $button-color2: #f0690a;
 
 .container {
+  width: 100%;
   margin-top: 312px;
 }
 
@@ -130,7 +143,7 @@ button:active {
 }
 
 .apps__button {
-  border: 0.5px solid #e4e4e4;
+  border: 0.5px solid #e9e9e9;
 }
 
 .apps__name {
@@ -203,7 +216,7 @@ button:active {
   border-radius: 0 0 5px 5px;
   color: #fff;
 
-  .apps_value {
+  .apps__value {
     font-family: "Roboto", sans-serif;
     font-size: 22px;
   }
