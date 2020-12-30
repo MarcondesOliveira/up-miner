@@ -436,12 +436,7 @@ a {
   .component-body {
     width: 350px;
   }
-
-  /* .container__img  {
-    float: right;
-    opacity: 0.8;    
-  } */
-
+  
   .container__title {
     margin-right: 150px;
     width: auto;
@@ -499,13 +494,6 @@ a {
     padding: 0 20px;
   }
 }
-
-/* 
-@media (max-width: 1200px) {
-  .container  {
-    width: 100%;
-  }
-} */
 
 </style>
 

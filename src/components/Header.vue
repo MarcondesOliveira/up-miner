@@ -112,13 +112,13 @@ $button-color2: #f0690a;
   position: absolute;
   width: 100%;
   height: 312px;
-  float: right;
+  /* float: right; */
 }
 
 .container__img {
   width: 100%;
   height: 312px;
-  float: right;
+  /* float: right; */
 }
 
 .container__logo {
@@ -245,11 +245,6 @@ $button-color2: #f0690a;
 }
 
 @media (max-width: 575.98px) {
-  /* .container__img  {    
-    float: right;
-    opacity: 0.8;    
-  } */
-
   .container__title {
     margin-right: 150px;
     width: auto;
@@ -284,12 +279,6 @@ $button-color2: #f0690a;
     margin: 10px 50px 0 0;
     left: 5px;
   }
-  /* .price {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #fff;
-    margin: 0;
-  } */
 
   .container__description {
     padding-right: 30px;
@@ -305,13 +294,6 @@ $button-color2: #f0690a;
   }
 
 }
-
-
-/* @media (max-width: 1200px) {
-  .container  {
-    width: 100%;
-  }
-} */
 
 </style>
 

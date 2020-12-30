@@ -8,16 +8,13 @@
           :key="index"
           @click="filter = entry"
           class="apps__button"
-        >
-        
-          <div class="apps__button--flex">
-            <img class="apps__buttonIcons" :src="entry.icon" alt="Icone" />
-            <!-- <img class="apps__buttonIcons" :src="apps.icon" alt="Icone" /> -->
+        >        
+          <div class="apps__button--flex">            
+            <!-- <img class="apps__buttonIcons" :src="entry.icon" alt="Icone" /> -->
             <p class="apps__name">{{ entry }}</p>
           </div>
         </button>
       </div>
-
       <div class="apps__group">
         <div v-for="(entry, index) in apps" :key="index" class="apps__cards">
           <div class="apps__content">
