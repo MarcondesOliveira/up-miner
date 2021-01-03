@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Principal from './components/Principal.vue'
 import Header from './components/Header.vue'
 import HistoricoEmpresarial from './components/HistoricoEmpresarial.vue'
 import Profissional from './components/Profissional.vue'
@@ -19,6 +20,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'principal',
+      component: Principal
+    },
+    {
+      path: '/header',
       name: 'header',
       component: Header
     },

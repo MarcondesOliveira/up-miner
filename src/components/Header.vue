@@ -2,128 +2,150 @@
   <div class="container">
     <div class="line"></div>
     <div class="container__background">
-      <hooper :progress="true" :autoPlay="true" :playSpeed="3000" style="height: 312px">
+      <hooper
+        :progress="true"
+        :autoPlay="true"
+        :playSpeed="3000"
+        style="height: 312px"
+
+      >
         <slide>
           <div class="row">
             <div class="col">
-              <img class="container__img" src="../assets/head-image.png" alt="upMiner Background">
+              <img
+                class="container__img"
+                :src="require(`../assets/${imageUrl || 'head-image'}.png`)"
+                alt="upMiner Background"
+              />
             </div>
           </div>
         </slide>
         <slide>
           <div class="row">
             <div class="col">
-              <img class="container__img" src="../assets/head-image2.png" alt="upMiner Background">
+              <img
+                class="container__img"
+                :src="require(`../assets/${imageUrl || 'head-image2'}.png`)"
+                alt="upMiner Background"
+              />
             </div>
           </div>
         </slide>
         <slide>
           <div class="row">
             <div class="col">
-              <img class="container__img" src="../assets/head-image.png" alt="upMiner Background">
+              <img
+                class="container__img"
+                :src="require(`../assets/${imageUrl || 'head-image'}.png`)"
+                alt="upMiner Background"
+              />
             </div>
           </div>
         </slide>
         <slide>
           <div class="row">
             <div class="col">
-              <img class="container__img" src="../assets/head-image2.png" alt="upMiner Background">
+              <img
+                class="container__img"
+                :src="require(`../assets/${imageUrl || 'head-image2'}.png`)"
+                alt="upMiner Background"
+              />
             </div>
           </div>
         </slide>
       </hooper>
     </div>
     <div class="row">
-        <div class="container__logo">
-          <img src="../assets/upMiner.png" alt="Logo upMiner">
-          <p class="container__title">| Histórico Empresarial</p>
-        </div>
+      <div class="container__logo">
+        <img :src="require(`../assets/${logo || 'upMiner'}.png`)" alt="Logo upMiner" />
+        <p class="container__title" :style="styleHeader">
+          | {{ `${title || "Histórico Empresarial"}` }}
+        </p>
+      </div>
     </div>
     <div class="row">
-      <p class="container__description">O aplicativo Histórico Empresarial permite ao usuário ter acesso a todos <br>
-      os fatos e acontecimentos relevantes de uma empresa desde o seu ano <br>
-      de fundação </p>
+      <p class="container__description" :style="styleHeader">
+        O aplicativo {{ `${description || "Histórico Empresarial"}` }} permite ao usuário ter acesso a todos        
+        os fatos e acontecimentos relevantes de uma empresa desde o seu ano        
+        de fundação.
+      </p>
     </div>
     <div class="know">
-        <div class="know__price">
-          <p class="know__price-moeda">R$</p> 
-          <p class="know__price-valor">40,00</p>
+      <div class="know__price">
+        <p class="know__price-moeda" :style="styleHeader">R$</p>
+        <p class="know__price-valor" :style="styleHeader">40,00</p>
 
-          <router-link to="/historicoEmpresarial">
-            <button class="know__price-button" href="#">Saiba mais</button>            
+        <!-- <router-link to="/historicoEmpresarial">
+          <button class="know__price-button" href="#">Saiba mais</button>
+        </router-link> -->
+
+          <router-link :to="link">
+            <button class="know__price-button" href="#">Saiba mais</button>
           </router-link>
-        </div>
+      </div>
     </div>
-
-    <Card />
   </div>
 </template>
 
 <script>
-import Card from './Card'
-import { Hooper, Slide } from 'hooper';
-
-import 'hooper/dist/hooper.css';
-
+import { Hooper, Slide } from "hooper";
+import "hooper/dist/hooper.css";
 export default {
-  name: 'Header',
+  name: "Header",
   components: {
-    Card,
     Hooper,
     Slide,
   },
   props: {
-    msg: String
-  }
-}
+    imageUrl: String,
+    logo: String,
+    title: String,
+    description: String,
+    styleHeader: {
+      type: String,
+      required: true,
+    },
+    link: String
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import 'bootstrap';
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "bootstrap";
 $button-color1: #ff924e;
 $button-color2: #f0690a;
 
 .container {
   display: flex;
-  
   flex-direction: column;
   align-items: center;
-  width: 100%;
-}
-
-.col {
-  padding: 0;
+  width: 100vw;
 }
 
 .line {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   border-bottom: 5px solid $button-color2;
   margin-top: 307px;
   z-index: 1;
-  /* float: right; */
 }
-
 .container__background {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 312px;
-  /* float: right; */
 }
 
 .container__img {
-  width: 100%;
+  width: 100vw;
   height: 312px;
-  /* float: right; */
 }
 
 .container__logo {
   position: absolute;
-  display: flex; 
+  display: flex;
   align-items: center;
   left: 96px;
   top: 48px;
@@ -132,9 +154,9 @@ $button-color2: #f0690a;
 }
 
 .container__title {
-  color: #fff;
+  /* color: #fff; */
   position: relative;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 32px;
   margin: 0 0 0 5px;
@@ -142,12 +164,12 @@ $button-color2: #f0690a;
 
 .container__description {
   position: absolute;
-  color: #fff;
+  /* color: #fff; */
   /* margin-left: 92px; */
   width: 630px;
   left: 96px;
   top: 117px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 19px;
   text-align: justify;
   font-weight: 300;
@@ -162,7 +184,6 @@ $button-color2: #f0690a;
   top: 200px;
   padding: 20px;
   z-index: 1;
-
   .know__price {
     display: flex;
     align-items: center;
@@ -171,25 +192,23 @@ $button-color2: #f0690a;
     top: 232px;
     padding: 0;
   }
-    
 
   .know__price-moeda {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #ffffff;
+    /* color: #fff; */
     left: 92px;
     margin: 0;
   }
-
   .know__price-valor {
     /* position: relative; */
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 37px;
     font-weight: 400;
-    color: #ffffff;
+    /* color: #fff; */
     left: 92px;
-    margin: 0 0 0 5px
+    margin: 0 0 0 5px;
   }
 
   .know__price-button {
@@ -198,7 +217,7 @@ $button-color2: #f0690a;
     left: 92px;
     margin-left: 20px;
     font-size: 15px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: #ffffff;
     background-image: linear-gradient(to right, $button-color1, $button-color2);
@@ -222,7 +241,7 @@ $button-color2: #f0690a;
 }
 
 *:focus {
-    outline: 0 !important;
+  outline: 0 !important;
 }
 
 @media (max-width: 830px) {
@@ -230,17 +249,15 @@ $button-color2: #f0690a;
     top: 30px;
     left: 30px;
   }
-
   .container__description {
     width: 400px;
-    color: rgb(255, 255, 255);
-    font-family: 'Roboto', sans-serif;
+    /* color: rgb(255, 255, 255); */
+    font-family: "Roboto", sans-serif;
     font-size: 19px;
     text-align: justify;
     font-weight: 300;
     top: 80px;
     left: 30px;
-
   }
 }
 
@@ -250,29 +267,15 @@ $button-color2: #f0690a;
     width: auto;
     font-size: 25px;
   }
-
   .line {
     position: absolute;
     width: 100%;
     /* margin-left:-995px; */
     float: right;
   }
-
   .container__logo {
     top: 10px;
     left: 10px;
-  }
-
-  .container__description {
-    width: 400px;
-    color: rgb(255, 255, 255);
-    font-family: 'Roboto', sans-serif;
-    font-size: 19px;
-    text-align: justify;
-    font-weight: 300;
-    top: 90px;
-    left: 10px;
-
   }
 
   .know {
@@ -283,17 +286,13 @@ $button-color2: #f0690a;
   .container__description {
     padding-right: 30px;
     width: 400px;
-    color: rgb(255, 255, 255);
-    font-family: 'Roboto', sans-serif;
+    /* color: rgb(255, 255, 255); */
+    font-family: "Roboto", sans-serif;
     font-size: 19px;
     text-align: justify;
     font-weight: 300;
     top: 90px;
     left: 10px;
-
   }
-
 }
-
 </style>
-

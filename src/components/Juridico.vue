@@ -1,32 +1,15 @@
 <template>
   <div class="container">
-    <div class="line"></div>
-    <div class="container__background">
-      <div class="row">
-        <div class="col">
-          <img class="container__img" src="../assets/head-image2.png" alt="upMiner Background">
-        </div>
-      </div>
-    </div>
-    <div class="row">
-        <div class="container__logo">
-          <img src="../assets/upMiner2.png" alt="Logo upMiner">
-          <p class="container__title">| Jurídico</p>
-        </div>
-    </div>
-    <div class="row">
-      <p class="container__description">O aplicativo Jurídico permite ao usuário ter acesso a todos <br>
-      os fatos e acontecimentos relevantes de uma empresa desde o seu ano <br>
-      de fundação </p>
-    </div>
-    <div class="know">
-        <div class="know__price">
-          <p class="know__price-moeda">R$</p> 
-          <p class="know__price-valor">40,00</p>
+    <Header
+      imageUrl="head-image2"
+      logo="upMiner2"
+      title="Jurídico"
+      description="Jurídico"
+      styleHeader="color : #000"
+      link="#"
+    />
 
-          <button class="know__price-button" href="#">Saiba mais</button>
-        </div>
-    </div>
+    <!--  -->
 
     <div class="component-body">
       <router-link to="/">
@@ -72,14 +55,13 @@
               <div><img src="../assets/linha-do-tempo.jpg" alt=""> </div>
               <div><p class="linha-do-tempo__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo suscipit perspiciatis modi ad rem amet.</p></div>
             </div>
-          </slide>
-          
+          </slide>          
 
           <hooper-navigation slot="hooper-addons"></hooper-navigation>
         </hooper>
       </div>
       <div class="full_description">
-        <p>O aplicativo Histórico Empresarial permite ao usuário ter acesso a todos os fatos e acontecimentos relevantes de uma empresa desde o seu ano de fundação. Tenha acesso aos principais eventos corporativos de uma empresa, como: marcos jurídicos, mudança no quadro societário, aumento de capital reportagens e muito mais.</p>
+        <p>O aplicativo Jurídico permite ao usuário ter acesso a todos os fatos e acontecimentos relevantes de uma empresa desde o seu ano de fundação. Tenha acesso aos principais eventos corporativos de uma empresa, como: marcos jurídicos, mudança no quadro societário, aumento de capital reportagens e muito mais.</p>
         <p>Após realizar a consulta, o histórico é salvo automaticamente, tornando as informações acessíveis ao usuário. A linha do tempo pode também ser exportada no formato PDF.</p>
       </div>
 
@@ -95,6 +77,7 @@
 </template>
 
 <script>
+import Header from './Header'
 import {
   Hooper,
   Slide,
@@ -106,6 +89,7 @@ import 'hooper/dist/hooper.css';
 export default {
   name: 'Juridico',
   components: {
+    Header,
     Hooper,
     Slide,
     HooperNavigation

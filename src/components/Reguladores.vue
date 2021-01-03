@@ -1,33 +1,16 @@
 <template>
   <div class="container">
-    <div class="line"></div>
-    <div class="container__background">
-      <div class="row">
-        <div class="col">
-          <img class="container__img" src="../assets/head-image2.png" alt="upMiner Background">
-        </div>
-      </div>
-    </div>
-    <div class="row">
-        <div class="container__logo">
-          <img src="../assets/upMiner2.png" alt="Logo upMiner">
-          <p class="container__title">| Reguladores</p>
-        </div>
-    </div>
-    <div class="row">
-      <p class="container__description">O aplicativo Reguladores permite ao usuário ter acesso a todos <br>
-      os fatos e acontecimentos relevantes de uma empresa desde o seu ano <br>
-      de fundação </p>
-    </div>
-    <div class="know">
-        <div class="know__price">
-          <p class="know__price-moeda">R$</p> 
-          <p class="know__price-valor">40,00</p>
+    <Header
+      imageUrl="head-image2"
+      logo="upMiner2"
+      title="Reguladores"
+      description="Reguladores"
+      styleHeader="color : #000"
+      link="#"
+    />
 
-          <button class="know__price-button" href="#">Saiba mais</button>
-        </div>
-    </div>
-
+    <!--  -->
+    
     <div class="component-body">
       <router-link to="/">
         <div class="voltar">
@@ -72,14 +55,13 @@
               <div><img src="../assets/linha-do-tempo.jpg" alt=""> </div>
               <div><p class="linha-do-tempo__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo suscipit perspiciatis modi ad rem amet.</p></div>
             </div>
-          </slide>
-          
+          </slide>          
 
           <hooper-navigation slot="hooper-addons"></hooper-navigation>
         </hooper>
       </div>
       <div class="full_description">
-        <p>O aplicativo Histórico Empresarial permite ao usuário ter acesso a todos os fatos e acontecimentos relevantes de uma empresa desde o seu ano de fundação. Tenha acesso aos principais eventos corporativos de uma empresa, como: marcos jurídicos, mudança no quadro societário, aumento de capital reportagens e muito mais.</p>
+        <p>O aplicativo Reguladores permite ao usuário ter acesso a todos os fatos e acontecimentos relevantes de uma empresa desde o seu ano de fundação. Tenha acesso aos principais eventos corporativos de uma empresa, como: marcos jurídicos, mudança no quadro societário, aumento de capital reportagens e muito mais.</p>
         <p>Após realizar a consulta, o histórico é salvo automaticamente, tornando as informações acessíveis ao usuário. A linha do tempo pode também ser exportada no formato PDF.</p>
       </div>
 
@@ -95,6 +77,7 @@
 </template>
 
 <script>
+import Header from './Header'
 import {
   Hooper,
   Slide,
@@ -106,6 +89,7 @@ import 'hooper/dist/hooper.css';
 export default {
   name: 'Reguladores',
   components: {
+    Header,
     Hooper,
     Slide,
     HooperNavigation
@@ -153,8 +137,6 @@ $button-color2: #f0690a;
   flex-direction: column;
   width: 100%;
   margin-top: 330px;
-  /* border: 2px solid rgb(0, 68, 255); */
-  /* padding: 0 65px; */
 }
 
 .voltar {  
@@ -169,7 +151,6 @@ $button-color2: #f0690a;
   align-items: center;
   justify-content: space-around;
   margin-top: 60px;
-  border: 2 solid red;
 }
 
 .linha-do-tempo__arrow {
@@ -274,38 +255,29 @@ a {
 }
 
 .container {
-  /* border: 2px solid rgb(255, 0, 0); */
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   padding: 0 65px;
 }
 
-/* .col {
-  padding: 0;
-} */
-
 .line {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   border-bottom: 5px solid $button-color2;
   margin-top: 307px;
   z-index: 1;
-  /* float: right; */
 }
 
 .container__background {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 312px;
-  float: right;
 }
 
 .container__img {
-  width: 100%;
+  width: 100vw;
   height: 312px;
-  float: right;
 }
 
 .container__logo {
@@ -330,7 +302,6 @@ a {
 .container__description {
   position: absolute;
   color: #000000;
-  /* margin-left: 92px; */
   width: 630px;
   left: 96px;
   top: 117px;
@@ -370,7 +341,6 @@ a {
   }
 
   .know__price-valor {
-    /* position: relative; */
     font-family: 'Roboto', sans-serif;
     font-size: 37px;
     font-weight: 400;
@@ -420,7 +390,6 @@ a {
 
   .container__description {
     width: 400px;
-    /* color: rgb(255, 255, 255); */
     font-family: 'Roboto', sans-serif;
     font-size: 19px;
     text-align: justify;
@@ -436,7 +405,7 @@ a {
   .component-body {
     width: 350px;
   }
-  
+
   .container__title {
     margin-right: 150px;
     width: auto;
@@ -446,25 +415,13 @@ a {
   .line {
     position: absolute;
     width: 100%;
-    /* margin-left:-995px; */
+    margin-left:-995px;
     float: right;
   }
 
   .container__logo {
     top: 10px;
     left: 10px;
-  }
-
-  .container__description {
-    width: 400px;
-    /* color: #000000; */
-    font-family: 'Roboto', sans-serif;
-    font-size: 19px;
-    text-align: justify;
-    font-weight: 300;
-    top: 90px;
-    left: 10px;
-
   }
 
   .know {
@@ -475,7 +432,6 @@ a {
   .container__description {
     padding-right: 30px;
     width: 400px;
-    /* color: rgb(255, 255, 255); */
     font-family: 'Roboto', sans-serif;
     font-size: 19px;
     text-align: justify;
